@@ -24,23 +24,34 @@ var bio = {
 // bio component
 bio.display = function () {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").append(formattedName);
-    
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").append(formattedRole);
+    $("#header").prepend(formattedName + formattedRole);
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.twitter);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.email);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-    $("#header").append(formattedMobile);
-    $("#header").append(formattedEmail);
-    $("#header").append(formattedGithub);
-    $("#header").append(formattedLocation);
+    $("#topContacts").append(formattedMobile);
+    $("#topContacts").append(formattedEmail);
+    $("#topContacts").append(formattedGithub);
+    $("#topContacts").append(formattedLocation);
 
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+    $("#header").append(formattedPic);
+    $("#header").append(formattedMessage);
+
+    // skills
+    $("#header").append(HTMLskillsStart);
+    for (key in bio.skills) {
+        if (bio.skills.hasOwnProperty(key)) {
+            console.log(bio.skills[key]);
+            var formattedSkills = HTMLskills.replace("%data%", bio.skills[key]);
+            $("#header").append(formattedSkills);
+        }
+    }
 
 
 
