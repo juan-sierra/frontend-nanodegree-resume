@@ -29,8 +29,8 @@ bio.display = function () {
     $("#header").prepend(formattedName + formattedRole);
 
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.twitter);
-    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.email);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
     $("#topContacts").append(formattedMobile);
@@ -111,6 +111,54 @@ education.display = function () {
     }
     $(".education-entry").append(HTMLonlineClasses);
 };
+
+var work = {
+    "jobs" : [
+        {
+            "employer" : "Milestone Powered",
+            "title" : "Data Center Technician",
+            "location" : "Washington, D.C",
+            "dates" : "January 2017 - Present",
+            "description" : "Repaire FB servers"
+        },
+        {
+            "employer" : "Chief Technologies",
+            "title" : "Intern Junior Engineer",
+            "location" : "Washington, D.C",
+            "dates" : "July 2013 - December 2016",
+            "description" : "Learn programming principles"
+        },
+        {
+            "employer" : "Trapollo",
+            "title" : "Technical Support Rep",
+            "location" : "Washington, D.C",
+            "dates" : "February 2016 - December 2016",
+            "description" : "Handle technical calls and troubleshoot"
+        }
+    ]
+};
+
+work.display = function () {
+    $("#workExperience").append(HTMLworkStart);
+    for (key in work.jobs) {
+        if (work.jobs.hasOwnProperty(key)) {
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer);
+            var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key].title);
+            $(".work-entry").append(formattedEmployer + formattedTitle);
+
+            var formattedDates = HTMLworkDates.replace("%data%", work.jobs[key].dates);
+            $(".work-entry").append(formattedDates);
+
+            var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[key].location);
+            $(".work-entry").append(formattedLocation);
+
+            var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[key].description);
+            $(".work-entry").append(formattedDescription);
+        }
+    }
+};
+
+work.display();
 
 education.display();
 
