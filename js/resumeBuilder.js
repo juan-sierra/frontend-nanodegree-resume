@@ -158,6 +158,35 @@ work.display = function () {
     }
 };
 
+var projects = {
+    "projects" : [
+        {
+            "title" : "Personal Website",
+            "dates" : "March 2017",
+            "description" : "I made this website to showcase my projects and skills",
+            "images" : ["images", "images"]
+        },
+        {
+            "title" : "Project coming soon....",
+            "dates" : "March 2017",
+            "description" : "Sample project coming soon!",
+            "images" : ["images", "images"]
+        },
+        {
+            "title" : "Project coming soon....",
+            "dates" : "March 2017",
+            "description" : "Sample project coming soon!",
+            "images" : ["images", "images"]
+        }
+    ]
+};
+
+projects.display = function () {
+    for (var i = 0; i < )
+};
+
+projects.display();
+
 work.display();
 
 education.display();
