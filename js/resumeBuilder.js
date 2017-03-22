@@ -72,7 +72,7 @@ var education = {
             "degree" : "HSDG",
             "majors" : ["General Studies"],
             "dates" : "August 2010 - June 2013",
-            "url" : "......"
+            "url" : "............"
         }
     ],
     "onlineCourses" : [
@@ -80,12 +80,14 @@ var education = {
             "title" : "Front End Developer Nanodegree",
             "school" : "Udacity",
             "dates" : "July 2016 - Present",
+            "description" : "Learn to build meaningful user experiences and build responsive websites.",
             "url" : "......."
         },
         {
             "title" : "Front End Development",
             "school" : "freeCodeCamp",
             "dates" : "July 2016 - Present",
+            "description" : "Learn by building projects for non-profits.",
             "url" : "......."
         }
     ]
@@ -110,6 +112,19 @@ education.display = function () {
         $(".education-entry").append(formattedMajor);
     }
     $(".education-entry").append(HTMLonlineClasses);
+    for (var key in education.onlineCourses) {
+        if (education.onlineCourses.hasOwnProperty(key)) {
+            var formattedClass = HTMLonlineTitle.replace("%data%", education.onlineCourses[key].title);
+            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key].school);
+            $(".education-entry").append(formattedClass + formattedSchool);
+
+            var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[key].dates);
+            $(".education-entry").append(formattedDate);
+
+            var formattedDescription = HTMLonlineDescription.replace("%data%", education.onlineCourses[key].description);
+            $(".education-entry").append(formattedDescription);
+        }
+    }
 };
 
 var work = {
@@ -164,25 +179,29 @@ var projects = {
             "title" : "Personal Website",
             "dates" : "March 2017",
             "description" : "I made this website to showcase my projects and skills",
-            "images" : ["images", "images"]
+            "images" : ["images/197x148.gif", "images"]
         },
         {
             "title" : "Project coming soon....",
             "dates" : "March 2017",
             "description" : "Sample project coming soon!",
-            "images" : ["images", "images"]
+            "images" : ["images/197x148.gif", "images"]
         },
         {
             "title" : "Project coming soon....",
             "dates" : "March 2017",
             "description" : "Sample project coming soon!",
-            "images" : ["images", "images"]
+            "images" : ["images/197x148.gif", "images"]
         }
     ]
 };
 
 projects.display = function () {
-    for (var i = 0; i < )
+    $("#projects").append(HTMLprojectStart);
+
+    for (var i = 0; i < projects.length; i++) {
+
+    }
 };
 
 projects.display();
