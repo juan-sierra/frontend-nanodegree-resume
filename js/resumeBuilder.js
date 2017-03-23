@@ -38,6 +38,11 @@ bio.display = function () {
     $("#topContacts").append(formattedGithub);
     $("#topContacts").append(formattedLocation);
 
+    $("#footerContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedGithub);
+    $("#footerContacts").append(formattedLocation);
+
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
@@ -199,10 +204,23 @@ var projects = {
 projects.display = function () {
     $("#projects").append(HTMLprojectStart);
 
-    for (var i = 0; i < projects.length; i++) {
+    for (var i = 0; i < projects.projects.length; i++) {
+        var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+        $(".project-entry").append(formattedTitle);
+
+        var formattedDate = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+        $(".project-entry").append(formattedDate);
+
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+        $(".project-entry").append(formattedDescription);
+
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[0]);
+        $(".project-entry").append(formattedImage);
 
     }
 };
+
+$("#mapDiv").append(googleMap);
 
 projects.display();
 

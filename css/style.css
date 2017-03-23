@@ -14,6 +14,10 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+html, body, #main {
+  height: 100%;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -26,7 +30,8 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #435058;
+  font-weight: lighter;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +39,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #f1f2ee;
   line-height: 29px;
   padding: 10px;
 }
@@ -65,7 +70,7 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #56e39f;
   line-height: 16px;
   float: left;
 }
@@ -73,7 +78,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #56e39f;
   line-height: 16px;
   float: right;
 
@@ -81,7 +86,7 @@ h5 {
 
 p {
   font-size: 14px;
-  color: #333;
+  color: #f1f2ee;
   line-height: 21px;
 }
 
@@ -100,7 +105,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #56e39f;
   display: none;
 }
 
@@ -109,12 +114,16 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #56e39f;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #435058;
+}
+
+hr {
+  width: 100%;
 }
 
 .gray {
@@ -129,7 +138,20 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #f1f2ee;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#workExperience {
+  min-height: 100%;
+  background: #435058;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flex-box {
@@ -139,6 +161,10 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+.flex-item {
+  list-style: none;
 }
 
 .flex-column {
