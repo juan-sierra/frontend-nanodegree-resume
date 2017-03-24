@@ -1,16 +1,16 @@
 // bio object
 var bio = {
-    "name" : "Juan Sierra",
-    "role" : "Front End Developer",
-    "contacts" : {
-        "mobile" : "571-571-5709",
-        "email" : "jasierra.garcia@gmail.com",
-        "twitter" : "jasierragarcia",
-        "github" : "juan-sierra",
-        "location" : "San Pedro Sula, Honduras"
+    "name": "Juan Sierra",
+    "role": "Front End Developer",
+    "contacts": {
+        "mobile": "571-571-5709",
+        "email": "jasierra.garcia@gmail.com",
+        "twitter": "jasierragarcia",
+        "github": "juan-sierra",
+        "location": "San Pedro Sula, Honduras"
     },
-    "welcomeMessage" : "Thank you for visiting!",
-    "skills" : [
+    "welcomeMessage": "Thank you for visiting!",
+    "skills": [
         "HTML",
         "CSS",
         "JavaScript",
@@ -18,7 +18,7 @@ var bio = {
         "Linux",
         "Bash / ZSH"
     ],
-    "biopic" : "images/me.jpg"
+    "biopic": "images/me.jpg"
 }
 
 
@@ -61,39 +61,37 @@ bio.display = function () {
 };
 
 // education object
-var education = { 
-    "schools" : [
-        {
-            "name" : "Strayer University",
-            "location" : "Washington D.C.",
-            "degree" : "B.S",
-            "majors" : ["Computer Science", "Web Application Development"],
-            "dates" : "January 2017 - Present",
-            "url" : "......"
+var education = {
+    "schools": [{
+            "name": "Strayer University",
+            "location": "Washington D.C.",
+            "degree": "B.S",
+            "majors": ["Computer Science", "Web Application Development"],
+            "dates": "January 2017 - Present",
+            "url": "......"
         },
         {
-            "name" : "Tuscarora High School",
-            "location" : "Washington D.C.",
-            "degree" : "HSDG",
-            "majors" : ["General Studies"],
-            "dates" : "August 2010 - June 2013",
-            "url" : "............"
+            "name": "Tuscarora High School",
+            "location": "Washington D.C.",
+            "degree": "HSDG",
+            "majors": ["General Studies"],
+            "dates": "August 2010 - June 2013",
+            "url": "............"
         }
     ],
-    "onlineCourses" : [
-        {
-            "title" : "Front End Developer Nanodegree",
-            "school" : "Udacity",
-            "dates" : "July 2016 - Present",
-            "description" : "Learn to build meaningful user experiences and build responsive websites.",
-            "url" : "......."
+    "onlineCourses": [{
+            "title": "Front End Developer Nanodegree",
+            "school": "Udacity",
+            "dates": "July 2016 - Present",
+            "description": "Learn to build meaningful user experiences and build responsive websites.",
+            "url": "......."
         },
         {
-            "title" : "Front End Development",
-            "school" : "freeCodeCamp",
-            "dates" : "July 2016 - Present",
-            "description" : "Learn by building projects for non-profits.",
-            "url" : "......."
+            "title": "Front End Development",
+            "school": "freeCodeCamp",
+            "dates": "July 2016 - Present",
+            "description": "Learn by building projects for non-profits.",
+            "url": "......."
         }
     ]
 };
@@ -133,27 +131,26 @@ education.display = function () {
 };
 
 var work = {
-    "jobs" : [
-        {
-            "employer" : "Milestone Powered",
-            "title" : "Data Center Technician",
-            "location" : "Washington, D.C",
-            "dates" : "January 2017 - Present",
-            "description" : "Repaire FB servers"
+    "jobs": [{
+            "employer": "Milestone Powered",
+            "title": "Data Center Technician",
+            "location": "Washington, D.C",
+            "dates": "January 2017 - Present",
+            "description": "Repaire FB servers"
         },
         {
-            "employer" : "Chief Technologies",
-            "title" : "Intern Junior Engineer",
-            "location" : "Washington, D.C",
-            "dates" : "July 2013 - December 2016",
-            "description" : "Learn programming principles"
+            "employer": "Chief Technologies",
+            "title": "Intern Junior Engineer",
+            "location": "Washington, D.C",
+            "dates": "July 2013 - December 2016",
+            "description": "Learn programming principles"
         },
         {
-            "employer" : "Trapollo",
-            "title" : "Technical Support Rep",
-            "location" : "Washington, D.C",
-            "dates" : "February 2016 - December 2016",
-            "description" : "Handle technical calls and troubleshoot"
+            "employer": "Trapollo",
+            "title": "Technical Support Rep",
+            "location": "Washington, D.C",
+            "dates": "February 2016 - December 2016",
+            "description": "Handle technical calls and troubleshoot"
         }
     ]
 };
@@ -179,24 +176,23 @@ work.display = function () {
 };
 
 var projects = {
-    "projects" : [
-        {
-            "title" : "Personal Website",
-            "dates" : "March 2017",
-            "description" : "I made this website to showcase my projects and skills",
-            "images" : ["images/197x148.gif", "images"]
+    "projects": [{
+            "title": "Personal Website",
+            "dates": "March 2017",
+            "description": "I made this website to showcase my projects and skills",
+            "images": ["images/197x148.gif", "images"]
         },
         {
-            "title" : "Project coming soon....",
-            "dates" : "March 2017",
-            "description" : "Sample project coming soon!",
-            "images" : ["images/197x148.gif", "images"]
+            "title": "Project coming soon....",
+            "dates": "March 2017",
+            "description": "Sample project coming soon!",
+            "images": ["images/197x148.gif", "images"]
         },
         {
-            "title" : "Project coming soon....",
-            "dates" : "March 2017",
-            "description" : "Sample project coming soon!",
-            "images" : ["images/197x148.gif", "images"]
+            "title": "Project coming soon....",
+            "dates": "March 2017",
+            "description": "Sample project coming soon!",
+            "images": ["images/197x148.gif", "images"]
         }
     ]
 };
@@ -229,3 +225,7 @@ work.display();
 education.display();
 
 bio.display();
+
+$(document).ready(function () {
+    alert('please scroll down to see more content, thank you for visiting! \uD83D\uDE00');
+});
