@@ -50,14 +50,12 @@ bio.display = function () {
     $("#header").append(formattedMessage);
 
     // skills
-    $("#header").append(HTMLskillsStart);
-    for (key in bio.skills) {
-        if (bio.skills.hasOwnProperty(key)) {
-            console.log(bio.skills[key]);
-            var formattedSkills = HTMLskills.replace("%data%", bio.skills[key]);
-            $("#header").append(formattedSkills);
-        }
-    }
+
+    bio.skills.forEach(function(skill) {
+        var formattedSkills = HTMLskills.replace("%data%", skill);
+        $("#header").append(formattedSkills);
+        console.log(skill);
+    });
 };
 
 // education object
@@ -114,20 +112,20 @@ education.display = function () {
         var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
         $(".education-entry").append(formattedMajor);
     }
+
     $(".education-entry").append(HTMLonlineClasses);
-    for (var key in education.onlineCourses) {
-        if (education.onlineCourses.hasOwnProperty(key)) {
-            var formattedClass = HTMLonlineTitle.replace("%data%", education.onlineCourses[key].title);
-            var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key].school);
+
+    education.onlineCourses.forEach(function(course) {
+        var formattedClass = HTMLonlineTitle.replace("%data%", course.title);
+            var formattedSchool = HTMLonlineSchool.replace("%data%", course.school);
             $(".education-entry").append(formattedClass + formattedSchool);
 
-            var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[key].dates);
+            var formattedDate = HTMLonlineDates.replace("%data%", course.dates);
             $(".education-entry").append(formattedDate);
 
-            var formattedDescription = HTMLonlineDescription.replace("%data%", education.onlineCourses[key].description);
+            var formattedDescription = HTMLonlineDescription.replace("%data%", course.description);
             $(".education-entry").append(formattedDescription);
-        }
-    }
+    });
 };
 
 var work = {
@@ -157,22 +155,21 @@ var work = {
 
 work.display = function () {
     $("#workExperience").append(HTMLworkStart);
-    for (key in work.jobs) {
-        if (work.jobs.hasOwnProperty(key)) {
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer);
-            var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key].title);
-            $(".work-entry").append(formattedEmployer + formattedTitle);
 
-            var formattedDates = HTMLworkDates.replace("%data%", work.jobs[key].dates);
-            $(".work-entry").append(formattedDates);
+    work.jobs.forEach(function (work) {
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.title);
+        $(".work-entry").append(formattedEmployer + formattedTitle);
 
-            var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[key].location);
-            $(".work-entry").append(formattedLocation);
+        var formattedDates = HTMLworkDates.replace("%data%", work.dates);
+        $(".work-entry").append(formattedDates);
 
-            var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[key].description);
-            $(".work-entry").append(formattedDescription);
-        }
-    }
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.location);
+        $(".work-entry").append(formattedLocation);
+
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.description);
+        $(".work-entry").append(formattedDescription);
+    });
 };
 
 var projects = {
@@ -180,19 +177,19 @@ var projects = {
             "title": "Personal Website",
             "dates": "March 2017",
             "description": "I made this website to showcase my projects and skills",
-            "images": ["images/197x148.gif", "images"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
             "title": "Project coming soon....",
             "dates": "March 2017",
             "description": "Sample project coming soon!",
-            "images": ["images/197x148.gif", "images"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         },
         {
             "title": "Project coming soon....",
             "dates": "March 2017",
             "description": "Sample project coming soon!",
-            "images": ["images/197x148.gif", "images"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         }
     ]
 };
@@ -210,8 +207,11 @@ projects.display = function () {
         var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
         $(".project-entry").append(formattedDescription);
 
-        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[0]);
+        
+        projects.projects[i].images.forEach(function (image) {
+        var formattedImage = HTMLprojectImage.replace("%data%", image);
         $(".project-entry").append(formattedImage);
+    });
 
     }
 };
