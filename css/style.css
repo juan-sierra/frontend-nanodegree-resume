@@ -14,7 +14,9 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-html, body, #main {
+html,
+body,
+#main {
   height: 100%;
 }
 
@@ -63,9 +65,7 @@ h3,
 h4,
 h5 {
   padding: 10px 5%;
-
 }
-
 
 .date-text {
   font-style: italic;
@@ -81,7 +81,6 @@ h5 {
   color: #56e39f;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -124,6 +123,8 @@ a {
 
 hr {
   width: 100%;
+  border-style: none;
+  border: 1px solid #56e39f;
 }
 
 .gray {
@@ -136,7 +137,9 @@ hr {
   background-color: #4a4a4a;
 }
 
+
 /* TODO: Replace with image later */
+
 #header {
   background-color: #f1f2ee;
   min-height: 100%;
@@ -144,6 +147,10 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.welcome-message {
+  color: #4a4a4a;
 }
 
 #workExperience {
@@ -154,6 +161,15 @@ hr {
   justify-content: center;
 }
 
+.work-title {
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.work-text {
+  color: #f1f2ee;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -161,6 +177,56 @@ hr {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+#projects {
+  min-height: 100%;
+}
+
+.project-title {
+  color: #435058;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.project-text {
+  color: #435058;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.edu-title {
+  color: #435058;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+.map-title {
+  color: #435058;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+#mapDiv {
+  min-height: 50%;
+}
+
+#lets-connect {
+  min-height: 10%;
+  color: #fff;
+}
+
+.connect-title {
+  color: #fff;
+}
+
+#footerContacts .white-text {
+  color: #fff;
 }
 
 .flex-item {
@@ -200,6 +266,7 @@ span {
 #lets-connect {
   text-align: center;
 }
+
 
 /* Media queries to handle various device widths */
 
